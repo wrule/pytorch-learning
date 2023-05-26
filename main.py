@@ -1,6 +1,7 @@
-#!/opt/homebrew/share/man/man1/python3.1
+import torch
 
 def main():
-  print('你好，世界')
+  x = torch.rand(5, 3)
+  print(x)
 
 main()
