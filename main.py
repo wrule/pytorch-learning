@@ -2,10 +2,12 @@
 import torch
 import pandas as pd
 
+def csv_to_tensor(csv_path):
+  df = pd.read_csv(csv_path, header = None)
+  return torch.tensor(df.to_numpy())
+
 def main():
-  print('你好，世界')
-  df = pd.read_csv('./data/ethusdt-1683364860372.csv', header = None)
-  print(df.head(10))
-  print(df.values.__len__())
+  t = csv_to_tensor('./data/ethusdt-1683364860372.csv')
+  print(t.__len__())
 
 main()
