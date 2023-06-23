@@ -7,7 +7,9 @@ def csv_to_tensor(csv_path):
   return torch.tensor(df.to_numpy())
 
 def main():
-  t = csv_to_tensor('./data/ethusdt-1683364860372.csv')
+  t = csv_to_tensor('./data/btcusdt-1683364830172.csv')
   print(t.__len__())
+  a = input('please input')
+  print(a)
 
 main()
